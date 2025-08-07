@@ -56,4 +56,4 @@ This project is a simple command-line Pokedex built with TypeScript. Explore Pok
 
 ## License
 
-This project is for educational purposes as part of a Boot.dev
+This project is for educational purposes as part of a Boot.dev learning module.
