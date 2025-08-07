@@ -31,7 +31,7 @@ This project is a simple command-line Pokedex built with TypeScript. Explore Pok
    npm start
    ```
 
-## Controls / Commands
+## Commands
 
 - `help` — Displays a help message with available commands
 - `exit` — Exits the Pokedex
