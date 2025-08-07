@@ -19,6 +19,7 @@ export async function commandCatch(state: State, pokemonName: string) {
 
         if (catchChance > roll) {
             console.log(`${pokemonName} was caught!`);
+            console.log('You may now inspect it with the "inspect" command.');
             state.userPokedex[pokemonName] = pokemon;
         } else {
             console.log(`${pokemonName} escaped!`);
