@@ -11,15 +11,18 @@ export async function startREPL(state: State): Promise<void> {
         }
 
         const command = state.commands[cleanedInput[0]];
+        const args = cleanedInput.slice(1);
+        
         if (!command) {
             console.log('Unknown command. Type "help" for a list of commands.');
             state.readline.prompt();
             return;
         } else {
             try {
-                await command.callback(state);
+                await command.callback(state, ...args);
             } catch (e) {
-                console.error(`command failed due to: ${(e as Error).message}`);
+                console.error(`Command failed due to: ${(e as Error).message}`);
+                console.log();
             }
             state.readline.prompt();
         }
